@@ -1,0 +1,11 @@
+html, body, #app {
+    color: var(--black);
+    font-family: 'Mitr', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+}
