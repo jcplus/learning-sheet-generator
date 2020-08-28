@@ -1,6 +1,7 @@
 <template>
-    <div id="app">
+    <div id="app" class="show-terminal">
         <router-view/>
+        <terminal></terminal>
     </div>
 </template>
 
@@ -10,5 +11,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+#app {
+    background-image: url('./assets/background/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>

@@ -1,11 +1,50 @@
 html, body, #app {
     color: var(--black);
     font-family: 'Mitr', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: normal;
     height: 100%;
+    overflow: hidden;
 }
 
 .container {
+    display: flex;
     height: 100%;
+}
+
+.show-terminal .container {
+    height: calc(100% - 200px);
+}
+
+.pane-left,
+.pane-right {
+    position: relative;
+    background-color: var(--white);
+    z-index: 1;
+}
+
+.pane-left {
+    background-color: var(--grey-dark);
+    box-shadow: 2px 0 2px 0 rgba(0,0,0,.2), 5px 0 10px 0 rgba(0,0,0,.1);
+    color: var(--white);
+    width: 200px;
+    z-index: 2;
+}
+
+.pane-right {
+    flex-grow: 1;
+}
+
+.pane-left .title {
+    /* margin-bottom: 20px; */
+    padding: 10px;
+}
+
+.pane-left h1 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.pane-left h2 {
+    font-size: 1em;
 }

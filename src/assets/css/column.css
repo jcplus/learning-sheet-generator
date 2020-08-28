@@ -1,0 +1,15 @@
+.cols-middle-side {
+    display: flex;
+}
+
+.cols-grow {
+    flex-grow: 1;
+}
+
+.cols-middle-side {
+    align-items: center;
+}
+
+.cols-middle-side {
+    justify-content: space-between;
+}

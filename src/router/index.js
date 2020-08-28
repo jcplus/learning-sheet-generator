@@ -1,16 +1,27 @@
 import Vue from 'vue';
-import Router from 'vue-router';
-import Multiply from '@/components/math/Multiply'
+import VueRouter from 'vue-router';
+import Home from '@/components/Home';
+import Multiply from '@/components/math/Multiply';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+const routes_config = [
+    {
+        path: '/',
+        name: 'home',
+        component: Home,
+        meta:{requiresAuth: true}
+    },
+    {
+        path: '/math/multiply',
+        name: 'multiply',
+        component: Multiply
+    }
+];
+
+const router = new VueRouter({
     mode: 'history',
-    routes: [
-        {
-            path: '/math/multiply',
-            name: 'multiply',
-            component: Multiply
-        }
-    ]
+    routes: routes_config
 });
+
+export default router;
