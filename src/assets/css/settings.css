@@ -50,10 +50,6 @@
     width: 100%;
 }
 
-.settings .row:not([show-slider="true"]) .slider-holder {
-    display: none;
-}
-
 .settings .slider {
-    widows: 100%;
+    width: 100%;
 }

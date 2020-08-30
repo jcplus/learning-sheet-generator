@@ -6,28 +6,28 @@
                 <h2>{{page.subtitle}}</h2>
             </div>
             <div class="settings">
-                <div class="row" :show-slider="settings.rows.showSlider">
-                    <div class="cols-middle-side">
-                        <div class="icon-sliders" @click="settings.rows.showSlider = !settings.rows.showSlider"></div>
-                        <div class="value-holder cols-middle-side cols-grow">
-                            <input type="text" inputmode="numeric" class="value cols-grow" :value="settings.rows.value">
-                            <div class="unit">{{settings.rows.unit}}</div>
-                        </div>
+                <div class="row">
+                    <div class="cols-middle-left">
+                        <div class="label">{{settings.rows.value}}</div>
+                        <div class="unit">{{settings.rows.unit}}</div>
                     </div>
                     <div class="slider-holder">
-                        <input type="range" class="slider" :min="settings.rows.min" :max="settings.rows.max" :value="settings.rows.value" @change="settings.rows.value = $event.target.value">
+                        <input type="range" class="slider" :min="settings.rows.min" :max="settings.rows.max" :value="settings.rows.value" @input="settings.rows.value = $event.target.value">
                     </div>
                 </div>
-                <div class="row" :show-slider="settings.columns.showSlider">
-                    <div class="cols-middle-side">
-                        <div class="icon-sliders" @click="settings.columns.showSlider = !settings.columns.showSlider"></div>
-                        <div class="value-holder cols-middle-side cols-grow">
-                            <input type="text" inputmode="numeric" class="value cols-grow" :value="settings.columns.value">
-                            <div class="unit">{{settings.columns.unit}}</div>
-                        </div>
+                <div class="row">
+                    <div class="cols-middle-left">
+                        <div class="label">{{settings.columns.value}}</div>
+                        <div class="unit">{{settings.columns.unit}}</div>
                     </div>
                     <div class="slider-holder">
-                        <input type="range" class="slider" :min="settings.columns.min" :max="settings.columns.max" :value="settings.columns.value" @change="settings.columns.value = $event.target.value">
+                        <input type="range" class="slider" :min="settings.columns.min" :max="settings.columns.max" :value="settings.columns.value" @input="settings.columns.value = $event.target.value">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="label">{{settings.maxFactor.unit}}</div>
+                    <div class="value-holder">
+                        <input type="text" inputmode="numeric" min="settings.maxFactor.min">
                     </div>
                 </div>
             </div>
@@ -46,19 +46,21 @@ export default {
                 title: 'Math'
             },
             settings: {
-                columns: {
-                    max: 10,
-                    min: 1,
-                    unit: 'Columns',
-                    showSlider: false,
+                maxFactor: {
+                    unit: 'Max Factor',
                     value: 10
                 },
-                rows: {
+                columns: {
                     max: 4,
                     min: 1,
-                    showSlider: false,
+                    unit: 'Columns',
+                    value: 4
+                },
+                rows: {
+                    max: 10,
+                    min: 1,
                     unit: 'Rows',
-                    value: 2
+                    value: 10
                 },
             }
         }

@@ -19,7 +19,7 @@ input[type=number]::-webkit-outer-spin-button {
 input[type="range"] {
     background-color: var(--teal);
     border-radius: 10px;
-    height: 5px;
+    height: 2px;
     opacity: .7;
     transition: opacity .2s;
 }
