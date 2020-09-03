@@ -130,4 +130,13 @@
     /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-minus:before { content: '\e800'; } /* '' */
+.icon-plus:before { content: '\e801'; } /* '' */
+.icon-plus-squared:before { content: '\e802'; } /* '' */
+.icon-minus-squared:before { content: '\e803'; } /* '' */
+.icon-arrow-up:before { content: '\e804'; } /* '' */
+.icon-arrow-left:before { content: '\e805'; } /* '' */
+.icon-arrow-right:before { content: '\e806'; } /* '' */
+.icon-arrow-down:before { content: '\e807'; } /* '' */
+.icon-print:before { content: '\f087'; } /* '' */
 .icon-sliders:before { content: '\f1de'; } /* '' */

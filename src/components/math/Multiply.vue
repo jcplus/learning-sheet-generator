@@ -26,8 +26,14 @@
                 </div>
                 <div class="row">
                     <div class="label">{{settings.maxFactor.unit}}</div>
-                    <div class="value-holder">
+                    <div class="number-control">
+                        <div class="decrease">
+                            <i class="icon-mius-squared"></i>
+                        </div>
                         <input type="text" inputmode="numeric" min="settings.maxFactor.min">
+                        <div class="increase">
+                            <i class="icon-plus-squared"></i>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,18 +17,18 @@
     margin-right: 10px;
 }
 
-.settings .value-holder {
+.settings .value-wrapper {
     border: 1px solid var(--grey-light);
     border-radius: 3px;
 }
 
-.settings .value-holder input[type="text"] {
+.settings .value-wrapper input[type="text"] {
     background-color: transparent;
     border: none;
     color: var(--white);
 }
 
-.settings .value-holder input[type="text"]:focus {
+.settings .value-wrapper input[type="text"]:focus {
     background-color: var(--grey-lighter);
     color: var(--black);
 }
@@ -53,3 +53,9 @@
 .settings .slider {
     width: 100%;
 }
+
+.number-control {
+    width: 100%;
+}
+
+.number-control .value-wrapper {}
