@@ -1,13 +1,18 @@
 <template>
     <div id="app" class="show-terminal">
         <router-view/>
-        <terminal></terminal>
+        <terminal :on="terminalOn"></terminal>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'App'
+    name: 'App',
+    date () {
+        return {
+            terminalOn: false
+        }
+    }
 }
 </script>
 
