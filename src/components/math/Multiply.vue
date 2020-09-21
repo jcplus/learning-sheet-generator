@@ -67,7 +67,9 @@
                 </button>
             </div>
         </div>
-        <div class="pane-right"></div>
+        <div class="pane-right">
+
+        </div>
     </div>
 </template>
 
