@@ -13,7 +13,7 @@ html, body, #app {
 }
 
 .show-terminal .container {
-    height: calc(100% - 200px);
+    height: 100%;
 }
 
 .pane-left,

@@ -25,17 +25,46 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="label">{{settings.maxFactor.unit}}</div>
                     <div class="number-control">
-                        <div class="decrease">
-                            <i class="icon-mius-squared"></i>
+                        <div class="label">{{settings.maxFactor.unit}}</div>
+                        <div class="decrease" @click="settings.maxFactor.value -= settings.maxFactor.step">
+                            <i class="icon-minus"></i>
                         </div>
-                        <input type="text" inputmode="numeric" min="settings.maxFactor.min">
-                        <div class="increase">
-                            <i class="icon-plus-squared"></i>
+                        <input type="number" min="settings.maxFactor.min" :value="settings.maxFactor.value" @focus="$event.target.select()">
+                        <div class="increase" @click="settings.maxFactor.value += settings.maxFactor.step">
+                            <i class="icon-plus"></i>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="number-control">
+                        <div class="label">{{settings.minFactor.unit}}</div>
+                        <div class="decrease" @click="settings.minFactor.value -= settings.minFactor.step">
+                            <i class="icon-minus"></i>
+                        </div>
+                        <input type="number" min="settings.minFactor.min" :value="settings.minFactor.value" @focus="$event.target.select()">
+                        <div class="increase" @click="settings.minFactor.value += settings.maxFactor.step">
+                            <i class="icon-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="number-control">
+                        <div class="label">{{settings.numberInOneFormula.unit}}</div>
+                        <div class="decrease" @click="settings.numberInOneFormula.value -= settings.numberInOneFormula.step">
+                            <i class="icon-minus"></i>
+                        </div>
+                        <input type="number" min="settings.numberInOneFormula.min" :value="settings.numberInOneFormula.value" @focus="$event.target.select()">
+                        <div class="increase" @click="settings.numberInOneFormula.value += settings.maxFactor.step">
+                            <i class="icon-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button-set">
+                <button class="preview">
+                    <span class="inner">Preview</span>
+                </button>
             </div>
         </div>
         <div class="pane-right"></div>
@@ -53,8 +82,19 @@ export default {
             },
             settings: {
                 maxFactor: {
+                    step: 1,
                     unit: 'Max Factor',
                     value: 10
+                },
+                minFactor: {
+                    step: 1,
+                    unit: 'Min Factor',
+                    value: 1
+                },
+                numberInOneFormula: {
+                    step: 1,
+                    unit: 'Number in one formula',
+                    value: 2
                 },
                 columns: {
                     max: 4,

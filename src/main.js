@@ -14,10 +14,10 @@ import './assets/css/page.css';
 import './assets/css/settings.css';
 
 // Load components
-import Terminal from '@/components/Terminal';
+// import Terminal from '@/components/Terminal';
 
 // Assign components globally
-Vue.component('terminal', Terminal);
+// Vue.component('terminal', Terminal);
 
 new Vue({
     el: '#app',

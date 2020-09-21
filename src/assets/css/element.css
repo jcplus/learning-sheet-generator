@@ -1,3 +1,29 @@
+button {
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: inset 0 -2px 0 0 rgba(0,0,0,.5);
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+button:hover {
+}
+
+button:active {
+    box-shadow: inset 0 2px 0 0 rgba(0,0,0,.5), inset 0 0 50px 10px rgba(0,0,0,.1);
+}
+
+button .inner {
+    position: relative;
+    top: -1px;
+}
+
+button:active .inner {
+    top: 1px;
+}
+
 input[type="email"],
 input[type="number"],
 input[type="password"],
