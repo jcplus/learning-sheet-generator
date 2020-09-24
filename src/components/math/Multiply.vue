@@ -62,13 +62,13 @@
                 </div>
             </div>
             <div class="button-set">
-                <button class="preview">
+                <button class="preview" @click="preview">
                     <span class="inner">Preview</span>
                 </button>
             </div>
         </div>
         <div class="pane-right">
-
+            <div class="paper"></div>
         </div>
     </div>
 </template>
@@ -111,6 +111,11 @@ export default {
                     value: 10
                 },
             }
+        }
+    },
+    methods: {
+        preview () {
+
         }
     }
 }
